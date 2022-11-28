@@ -8,11 +8,11 @@ import { TransactionService } from '../service/transaction.service';
 export class TransactionController {
   constructor(private readonly transactionService: TransactionService) {}
 
-  @Post()
-  create(@Body() transaction: TransactionDto): Promise<TransactionEntity> {
-    transaction.createdAt = new Date();
-    return this.transactionService.executeTransaction(transaction);
-  }
+  // @Post()
+  // create(@Body() transaction: TransactionDto): Promise<TransactionEntity> {
+  //   transaction.createdAt = new Date();
+  //   return this.transactionService.executeTransaction(transaction);
+  // }
 
   @Get()
   async findAll(): Promise<TransactionEntity[]> {
