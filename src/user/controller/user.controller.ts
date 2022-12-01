@@ -12,7 +12,7 @@ export class UserController {
     return await this.userService.create(user);
   }
 
-  @Post('createAccountAndUser')
+  @Post('register')
   async createAccountAndUser(
     @Body() accountUser: AccountUserDto,
   ): Promise<any> {
