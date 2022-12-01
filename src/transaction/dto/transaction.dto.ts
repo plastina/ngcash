@@ -17,3 +17,12 @@ export class TransactionDto {
   @IsDate()
   createdAt: Date;
 }
+
+export class ExecuteTransactionDto {
+  @IsNumber()
+  debitedAccount: number;
+  @IsNumber()
+  creditedAccount: number;
+  @IsNumber()
+  amount: number;
+}

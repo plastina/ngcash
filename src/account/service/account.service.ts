@@ -28,4 +28,17 @@ export class AccountService {
     var updatedAccount = await this.accountRepository.findOneBy({ id: id });
     if (update.affected > 0) return updatedAccount;
   }
+
+  async updateBalance(id: number, balance: number): Promise<AccountDto> {
+    var update = await this.accountRepository
+      .createQueryBuilder()
+      .update(AccountEntity)
+      .set({ balance: balance })
+      .where('id = :id', { id: id })
+      .execute();
+
+    var updatedAccount = await this.accountRepository.findOneBy({ id: id });
+    if (update.affected > 0) return updatedAccount;
+    else return null;
+  }
 }

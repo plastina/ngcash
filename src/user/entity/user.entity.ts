@@ -1,4 +1,3 @@
-import { IsNumber, IsString } from 'class-validator';
 import { AccountEntity } from 'src/account/entity/account.entity';
 import {
   Column,

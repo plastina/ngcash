@@ -1,6 +1,5 @@
 import { Controller, Post, UseGuards, Request } from '@nestjs/common';
-import { AuthService } from './service/auth.service.ts.service';
-import { AuthGuard } from '@nestjs/passport';
+import { AuthService } from './service/auth.service';
 import { JwtAuthGuard } from './strategy/jwt-auth.guard';
 
 @Controller('auth')
@@ -9,7 +8,6 @@ export class AuthController {
 
   @Post('/login')
   async login(@Request() req) {
-    console.log('req>>', req);
     var user = this.authService.validateUser(
       req.body.username,
       req.body.password,
