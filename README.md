@@ -1,6 +1,6 @@
 # Banco digital
 
-Desenvolvi um sistema baseado em um banco digital onde os usuários recebem bonus quando criam conta pela primeira vez, podem realizar transferências bancárias e tambem visualizar o extrato de cada transação. Este projeto foi desenvolvido para o processo seletivo da empresa NG.CASH.
+Desenvolvi um sistema baseado em um banco digital onde os usuários recebem bonus quando criam conta pela primeira vez, podem realizar transferências bancárias e tambem visualizar o extrato de cada transação. 
 
 Este é o resultado: https://github.com/plastina/ngcash
 
